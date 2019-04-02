@@ -1,4 +1,4 @@
-package gss.guru.loginnormal.utils.dagger.modules.authorization;
+package gss.guru.loginnormal.utils.dagger.modules.login;
 
 
 
@@ -9,9 +9,9 @@ import gss.guru.loginnormal.ui.login.LoginActivity;
 import gss.guru.loginnormal.utils.dagger.utils.ActivityScope;
 
 
-@Subcomponent(modules = {AuthorizationModule.class})
+@Subcomponent(modules = {LoginModule.class})
 @ActivityScope
-public interface AuthorizationComponent extends AndroidInjector<DaggerApplication>  {
+public interface LoginComponent extends AndroidInjector<DaggerApplication>  {
 
     void inject(LoginActivity activity);
 }

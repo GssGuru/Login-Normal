@@ -1,4 +1,4 @@
-package gss.guru.loginnormal.data.network.impl;
+package gss.guru.loginnormal.model.repository.network.impl;
 
 
 

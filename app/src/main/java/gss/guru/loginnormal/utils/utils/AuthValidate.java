@@ -2,7 +2,7 @@ package gss.guru.loginnormal.utils.utils;
 
 import java.util.regex.Pattern;
 
-import gss.guru.loginnormal.data.network.response.Auth;
+import gss.guru.loginnormal.model.repository.network.response.Auth;
 
 
 public class AuthValidate {

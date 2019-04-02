@@ -1,5 +1,7 @@
 package gss.guru.loginnormal.ui.login;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -13,8 +15,9 @@ import org.androidannotations.annotations.ViewById;
 
 import javax.inject.Inject;
 
+import gss.guru.loginnormal.Const;
 import gss.guru.loginnormal.R;
-import gss.guru.loginnormal.utils.dagger.modules.authorization.AuthorizationModule;
+import gss.guru.loginnormal.utils.dagger.modules.login.LoginModule;
 import gss.guru.loginnormal.utils.dagger.utils.Injectors;
 import gss.guru.loginnormal.utils.utils.AuthValidate;
 
@@ -41,7 +44,7 @@ public class LoginActivity extends AppCompatActivity implements LoginPresenterVi
 
     @Click({R.id.tv_registration})
     void tv_registration() {
-//        startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse(Const.LITEBOX_URL)));
+        startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse(Const.SITE_URL)));
     }
 
     @Click({R.id.tv_start_demo})
@@ -52,7 +55,7 @@ public class LoginActivity extends AppCompatActivity implements LoginPresenterVi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Injectors.get(this).plus(new AuthorizationModule()).inject(this);
+        Injectors.get(this).plus(new LoginModule()).inject(this);
         presenter.bindView(this);
     }
 

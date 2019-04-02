@@ -1,4 +1,4 @@
-package gss.guru.loginnormal.data.network.response;
+package gss.guru.loginnormal.model.repository.network.response;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

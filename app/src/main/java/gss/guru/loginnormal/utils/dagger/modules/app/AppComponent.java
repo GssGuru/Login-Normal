@@ -11,11 +11,10 @@ import dagger.android.AndroidInjector;
 import dagger.android.support.AndroidSupportInjectionModule;
 import dagger.android.support.DaggerApplication;
 import gss.guru.loginnormal.MyApp;
-import gss.guru.loginnormal.data.network.client.RetrofitClient;
-import gss.guru.loginnormal.data.network.impl.NetworkRepositoryImpl;
-import gss.guru.loginnormal.ui.main.MainPresenter;
-import gss.guru.loginnormal.utils.dagger.modules.authorization.AuthorizationComponent;
-import gss.guru.loginnormal.utils.dagger.modules.authorization.AuthorizationModule;
+import gss.guru.loginnormal.model.repository.network.client.RetrofitClient;
+import gss.guru.loginnormal.model.repository.network.impl.NetworkRepositoryImpl;
+import gss.guru.loginnormal.utils.dagger.modules.login.LoginComponent;
+import gss.guru.loginnormal.utils.dagger.modules.login.LoginModule;
 
 
 @Component(modules = {
@@ -27,20 +26,13 @@ import gss.guru.loginnormal.utils.dagger.modules.authorization.AuthorizationModu
 public interface AppComponent extends AndroidInjector<DaggerApplication>  {
 
 //    void inject(LoginActivity loginActivity);
-
-
-    void inject(MainPresenter mainPresenter);
-
-
+//    void inject(MainPresenter mainPresenter);
 
     void inject(RetrofitClient retrofitClient);
     void inject(NetworkRepositoryImpl network);
-
-
     void inject(MyApp app);
 
-
-    AuthorizationComponent plus(AuthorizationModule module);
+    LoginComponent plus(LoginModule module);
 
     @Component.Builder
     interface Builder {

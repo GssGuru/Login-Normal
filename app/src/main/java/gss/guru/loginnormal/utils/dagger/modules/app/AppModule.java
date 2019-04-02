@@ -8,37 +8,15 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 import gss.guru.loginnormal.MyApp;
-import gss.guru.loginnormal.data.network.client.RetrofitClient;
-import gss.guru.loginnormal.data.network.impl.NetworkRepository;
-import gss.guru.loginnormal.data.network.impl.NetworkRepositoryImpl;
-import gss.guru.loginnormal.data.preferenanse.UserPreferences;
-import gss.guru.loginnormal.ui.main.MainPresenter;
-import gss.guru.loginnormal.ui.main.MainPresenterView;
-import gss.guru.loginnormal.utils.rx.RxBus;
+import gss.guru.loginnormal.model.repository.network.client.RetrofitClient;
+import gss.guru.loginnormal.model.repository.network.impl.NetworkRepository;
+import gss.guru.loginnormal.model.repository.network.impl.NetworkRepositoryImpl;
+import gss.guru.loginnormal.model.repository.preference.PreferenceRepositoryImpl;
 import gss.guru.loginnormal.utils.rx.RxSchedulers;
-import gss.guru.loginnormal.utils.rx.RxSchedulersAbs;
+import gss.guru.loginnormal.utils.rx.RxSchedulersImpl;
 
 @Module
 public class AppModule {
-
-    private Context mContext;
-
-    @Provides
-    public Context provideContext(MyApp application) {
-        mContext = application.getApplicationContext();
-        return mContext;
-    }
-
-    @Provides
-    public Resources provideResources() {
-        return mContext.getResources();
-    }
-
-    @Provides
-    @Singleton
-    public RxBus provideRxBus() {
-        return new RxBus();
-    }
 
     @Provides
     @Singleton
@@ -54,20 +32,14 @@ public class AppModule {
 
     @Provides
     @Singleton
-    public UserPreferences provideSharedPrefsRepository() {
-        return new UserPreferences(mContext);
+    public PreferenceRepositoryImpl provideSharedPrefsRepository() {
+        return new PreferenceRepositoryImpl();
     }
 
     @Provides
     @Singleton
-    public RxSchedulersAbs provideRxSchedlers() {
+    public RxSchedulersImpl provideRxSchedlers() {
         return new RxSchedulers();
-    }
-
-    @Provides
-    @Singleton
-    MainPresenterView.Presenter providePresenterMain() {
-        return new MainPresenter();
     }
 
 }

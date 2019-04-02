@@ -4,7 +4,7 @@ import io.reactivex.Scheduler;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
-public class RxSchedulers extends RxSchedulersAbs {
+public class RxSchedulers extends RxSchedulersImpl {
 
     @Override
     public Scheduler getMainThreadScheduler() {

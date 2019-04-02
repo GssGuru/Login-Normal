@@ -4,7 +4,7 @@ import io.reactivex.MaybeTransformer;
 import io.reactivex.Scheduler;
 import io.reactivex.SingleTransformer;
 
-public abstract class RxSchedulersAbs {
+public abstract class RxSchedulersImpl {
 
     abstract public Scheduler getMainThreadScheduler();
 

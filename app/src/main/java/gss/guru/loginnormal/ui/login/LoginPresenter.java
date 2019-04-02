@@ -3,8 +3,8 @@ package gss.guru.loginnormal.ui.login;
 import android.util.Log;
 
 import io.reactivex.disposables.CompositeDisposable;
-import gss.guru.loginnormal.bussines.Interactor;
-import gss.guru.loginnormal.data.network.impl.NetworkRepository;
+import gss.guru.loginnormal.model.interactors.Interactor;
+import gss.guru.loginnormal.model.repository.network.impl.NetworkRepository;
 import gss.guru.loginnormal.utils.rx.RxSchedulers;
 
 public class LoginPresenter implements LoginPresenterView.Presenter {
@@ -14,14 +14,14 @@ public class LoginPresenter implements LoginPresenterView.Presenter {
 
     private LoginPresenterView.View view;
     private final CompositeDisposable disposable;
-    private Interactor.Auth interactor;
+    private Interactor.Login interactor;
 
     public LoginPresenter() {
 //        Injectors.get(MyApp.getContext()).inject(this);
         this.disposable = new CompositeDisposable();
     }
 
-    public LoginPresenter(Interactor.Auth interactor) {
+    public LoginPresenter(Interactor.Login interactor) {
 //        Injectors.get(MyApp.getContext()).inject(this);
         this.disposable = new CompositeDisposable();
         this.interactor = interactor;

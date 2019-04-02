@@ -1,9 +1,10 @@
-package gss.guru.loginnormal.data.network.client;
+package gss.guru.loginnormal.model.repository.network.client;
 
 import android.support.annotation.NonNull;
 
 import java.util.concurrent.TimeUnit;
 
+import gss.guru.loginnormal.Const;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -17,7 +18,6 @@ import gss.guru.loginnormal.utils.dagger.utils.Injectors;
 public class RetrofitClient {
 
     private static RetrofitClient instance;
-    private final String BASE_URL = "https://in.litebox.ru/api/m/";
     private ApiService apiService;
 
     public RetrofitClient() {
@@ -33,7 +33,7 @@ public class RetrofitClient {
 
     public ApiService getApiService() {
         if (apiService == null) {
-            apiService = buildApi(BASE_URL, ApiService.class);
+            apiService = buildApi(Const.BASE_URL, ApiService.class);
         }
         return apiService;
     }
@@ -68,11 +68,6 @@ public class RetrofitClient {
                     .build();
             return chain.proceed(request);
         });
-
-//        String token =  UserPreferences.getInstance().getToken();
-//        if(token != null && token.length() > 0){
-//            okHttpBuilder.addInterceptor(new TokenInterceptor(token));
-//        }
 
         if (BuildConfig.DEBUG) {
             okHttpBuilder.addInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BASIC).setLevel

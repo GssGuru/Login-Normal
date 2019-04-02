@@ -1,4 +1,4 @@
-package gss.guru.loginnormal.data.network.impl;
+package gss.guru.loginnormal.model.repository.network.impl;
 
 
 
@@ -6,7 +6,7 @@ import javax.inject.Inject;
 
 import io.reactivex.Single;
 import gss.guru.loginnormal.MyApp;
-import gss.guru.loginnormal.data.network.client.RetrofitClient;
+import gss.guru.loginnormal.model.repository.network.client.RetrofitClient;
 import gss.guru.loginnormal.utils.dagger.utils.Injectors;
 
 public class NetworkRepositoryImpl implements NetworkRepository {

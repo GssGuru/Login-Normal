@@ -1,4 +1,4 @@
-package gss.guru.loginnormal.data.network.client;
+package gss.guru.loginnormal.model.repository.network.client;
 
 import java.io.IOException;
 

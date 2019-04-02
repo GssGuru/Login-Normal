@@ -1,4 +1,4 @@
-package gss.guru.loginnormal.data.network.client;
+package gss.guru.loginnormal.model.repository.network.client;
 
 import io.reactivex.Single;
 import retrofit2.http.Body;

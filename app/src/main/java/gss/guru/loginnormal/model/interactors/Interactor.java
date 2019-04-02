@@ -1,10 +1,10 @@
-package gss.guru.loginnormal.bussines;
+package gss.guru.loginnormal.model.interactors;
 
 import io.reactivex.Single;
 
 public interface Interactor {
 
-    interface Auth {
+    interface Login {
 
         Single<String> auth(String email, String passwd);
     }
