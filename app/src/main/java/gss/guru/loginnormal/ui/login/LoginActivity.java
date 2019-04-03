@@ -27,29 +27,16 @@ public class LoginActivity extends AppCompatActivity implements LoginPresenterVi
     @Inject
     LoginPresenterView.Presenter presenter;
 
-    @ViewById EditText et_email;
-    @ViewById EditText et_password;
+    @ViewById EditText email;
+    @ViewById EditText password;
 
     @ViewById View login_progress;
     @ViewById View login_form;
 
-    @ViewById TextInputLayout til_password;
-    @ViewById TextInputLayout til_email;
-
-    @Click({R.id.btn_login})
-    void btn_login() {
-        if (AuthValidate.isEmailPasswdValid(et_email.getText().toString(), et_password.getText().toString()))
-            presenter.login(et_email.getText().toString(), et_password.getText().toString());
-    }
-
-    @Click({R.id.tv_registration})
-    void tv_registration() {
-        startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse(Const.SITE_URL)));
-    }
-
-    @Click({R.id.tv_start_demo})
-    void tv_start_demo() {
-        presenter.startDemo();
+    @Click({R.id.email_sign_in_button})
+    void login() {
+        if (AuthValidate.isEmailPasswdValid(email.getText().toString(), password.getText().toString()))
+            presenter.login(email.getText().toString(), password.getText().toString());
     }
 
     @Override
@@ -72,12 +59,12 @@ public class LoginActivity extends AppCompatActivity implements LoginPresenterVi
 
     @Override
     public void failEmail(String error) {
-        til_email.setError(error);
+        email.setError(error);
     }
 
     @Override
     public void failPasswd(String error) {
-        til_password.setError(error);
+        password.setError(error);
     }
 
     @Override
