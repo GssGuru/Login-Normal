@@ -1,4 +1,5 @@
 # !!! In developing !!!
+This repository is in development mode.
 
 # About the application
 Simple example login page with 1 Button, 2 EditText and internet request. 
