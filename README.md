@@ -40,7 +40,7 @@ Package [`model`](https://github.com/GssGuru/Login-Normal/tree/master/app/src/ma
 - [`interactors`](https://github.com/GssGuru/Login-Normal/tree/master/app/src/main/java/gss/guru/loginnormal/model/interactors) - Here we will work with entities.
 - [`repositories`](https://github.com/GssGuru/Login-Normal/tree/master/app/src/main/java/gss/guru/loginnormal/model/repository) - here we work only with data. We take and place them in the database, internal storage or work with Internet requests
 
-Package [`https://github.com/GssGuru/Login-Normal/tree/master/app/src/main/java/gss/guru/loginnormal/ui`](httpl). Divide package into parts:
+Package [`ui`](https://github.com/GssGuru/Login-Normal/tree/master/app/src/main/java/gss/guru/loginnormal/ui). Divide package into parts:
 - [`login`](https://github.com/GssGuru/Login-Normal/tree/master/app/src/main/java/gss/guru/loginnormal/ui/login)
 - [`utils`](https://github.com/GssGuru/Login-Normal/tree/master/app/src/main/java/gss/guru/loginnormal/ui/utils) - our utilities that only work with UI elements
 - [`BaseView.java`](https://github.com/GssGuru/Login-Normal/blob/master/app/src/main/java/gss/guru/loginnormal/ui/BaseView.java) - our utilities that only work with UI elements
