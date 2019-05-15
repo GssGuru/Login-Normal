@@ -43,7 +43,7 @@ To make our code more flexible we apply the MVP architectural pattern. Divide ap
 пакет ui. Divide package into parts:
 - login
 - utils
-- BaseActivity.java
+- BaseView.java
 
 пакет login. Divide package into parts:
 - LoginActivity.java
