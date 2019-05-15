@@ -4,7 +4,6 @@ import android.support.annotation.NonNull;
 
 import java.util.concurrent.TimeUnit;
 
-import gss.guru.loginnormal.Const;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -17,6 +16,7 @@ import gss.guru.loginnormal.utils.dagger.utils.Injectors;
 
 public class RetrofitClient {
 
+    public static final String BASE_URL = "https://gss.guru/api";
     private static RetrofitClient instance;
     private ApiService apiService;
 
@@ -33,7 +33,7 @@ public class RetrofitClient {
 
     public ApiService getApiService() {
         if (apiService == null) {
-            apiService = buildApi(Const.BASE_URL, ApiService.class);
+            apiService = buildApi(BASE_URL, ApiService.class);
         }
         return apiService;
     }

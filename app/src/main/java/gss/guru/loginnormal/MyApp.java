@@ -12,10 +12,6 @@ import gss.guru.loginnormal.utils.dagger.modules.app.DaggerAppComponent;
 
 public class MyApp extends DaggerApplication {
 
-    static {
-        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
-    }
-
     private static Context mContext;
 
     @Override

@@ -1,9 +1,6 @@
 package gss.guru.loginnormal.ui.login;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
@@ -15,11 +12,10 @@ import org.androidannotations.annotations.ViewById;
 
 import javax.inject.Inject;
 
-import gss.guru.loginnormal.Const;
 import gss.guru.loginnormal.R;
 import gss.guru.loginnormal.utils.dagger.modules.login.LoginModule;
 import gss.guru.loginnormal.utils.dagger.utils.Injectors;
-import gss.guru.loginnormal.utils.utils.AuthValidate;
+import gss.guru.loginnormal.ui.utils.AuthValidate;
 
 @EActivity(R.layout.activity_login)
 public class LoginActivity extends AppCompatActivity implements LoginPresenterView.View {

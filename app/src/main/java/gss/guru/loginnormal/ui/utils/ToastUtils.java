@@ -1,4 +1,4 @@
-package gss.guru.loginnormal.utils.utils;
+package gss.guru.loginnormal.ui.utils;
 
 public class ToastUtils {
 
