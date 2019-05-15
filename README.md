@@ -41,14 +41,14 @@ Package [`model`](https://github.com/GssGuru/Login-Normal/tree/master/app/src/ma
 - [`repositories`](https://github.com/GssGuru/Login-Normal/tree/master/app/src/main/java/gss/guru/loginnormal/model/repository) - here we work only with data. We take and place them in the database, internal storage or work with Internet requests
 
 Package [`ui`](https://github.com/GssGuru/Login-Normal/tree/master/app/src/main/java/gss/guru/loginnormal/ui). Divide package into parts:
-- [`login`](https://github.com/GssGuru/Login-Normal/tree/master/app/src/main/java/gss/guru/loginnormal/ui/login)
+- [`login`](https://github.com/GssGuru/Login-Normal/tree/master/app/src/main/java/gss/guru/loginnormal/ui/login) -  This package is called in accordance with the activation and in it are all the components necessary for the operation of this activit
 - [`utils`](https://github.com/GssGuru/Login-Normal/tree/master/app/src/main/java/gss/guru/loginnormal/ui/utils) - our utilities that only work with UI elements
 - [`BaseView.java`](https://github.com/GssGuru/Login-Normal/blob/master/app/src/main/java/gss/guru/loginnormal/ui/BaseView.java) - our utilities that only work with UI elements
 
 Package [`login`](https://github.com/GssGuru/Login-Normal/tree/master/app/src/main/java/gss/guru/loginnormal/ui/login). Divide package into parts:
-- [`LoginActivity.java`](https://github.com/GssGuru/Login-Normal/blob/master/app/src/main/java/gss/guru/loginnormal/ui/login/LoginActivity.java)
-- [`LoginActivityPresenter.java`](https://github.com/GssGuru/Login-Normal/blob/master/app/src/main/java/gss/guru/loginnormal/ui/login/LoginPresenter.java)
-- [`LoginActivityView.java`](https://github.com/GssGuru/Login-Normal/blob/master/app/src/main/java/gss/guru/loginnormal/ui/login/LoginPresenterView.java)
+- [`LoginActivity.java`](https://github.com/GssGuru/Login-Normal/blob/master/app/src/main/java/gss/guru/loginnormal/ui/login/LoginActivity.java) - page with 1 Button, 2 EditText, progress and internet request.
+- [`LoginActivityPresenter.java`](https://github.com/GssGuru/Login-Normal/blob/master/app/src/main/java/gss/guru/loginnormal/ui/login/LoginPresenter.java) - Element of the architectural pattern MVP. Binds business logic and view
+- [`LoginActivityView.java`](https://github.com/GssGuru/Login-Normal/blob/master/app/src/main/java/gss/guru/loginnormal/ui/login/LoginPresenterView.java) - Element of the architectural pattern MVP. Binds Presenter and UI
 
 ## Resources code
 [`Res folder.`](https://github.com/GssGuru/Login-Normal/tree/master/app/src/main/res) Change only Application Name
